@@ -33,7 +33,7 @@ public_users.get('/', async function (req, res) {
     try {
       const books = await fetchBooksFromDataSource();
   
-      return res.status(200).json(books);
+      return res.send(JSON.stringify(books));
     } catch (error) {
       console.error(error);
     }
